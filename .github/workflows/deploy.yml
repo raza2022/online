@@ -22,10 +22,10 @@ jobs:
         run: npm install
 
       - name: Build static site
-        run: npm run build  # optional if you have a build step
+        run: npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v6
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./  # or ./dist if you use a build tool
+          publish_dir: ./dist
